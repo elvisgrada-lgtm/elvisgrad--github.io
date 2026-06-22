@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona Exclusiva XD</title>
+    <link rel="icon" href="eskeletor.png">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            background-image: url(veeeeee.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* Caja contenedora para ordenar todo en el centro */
+        .welcome-box {
+            background-color: rgba(0, 0, 0, 0.75); /* Fondo negro con opacidad para resaltar sobre la imagen */
+            padding: 40px;
+            border-radius: 12px;
+            border: 2px solid #ffffff; /* Borde blanco nítido */
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Sombra pesada */
+        }
+
+        /* Estilo para la imagen de Fred Durst en la parte superior */
+        .avatar-img {
+            width: 200px; /* Tamaño ideal para que no tape todo */
+            height: auto;
+            display: block;
+            margin: 0 auto 20px auto; /* Centrada y con espacio abajo */
+            border-bottom: 2px solid #ffffff; /* Línea blanca divisoria */
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffffff; /* Texto en blanco */
+            line-height: 1.4;
+        }
+
+        /* Estructura del formulario */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espaciado uniforme entre inputs */
+        }
+
+        /* Estilos oscuros y limpios para las cajas de texto (inputs) */
+        form input {
+            width: 100%;
+            padding: 14px;
+            background-color: #121212; /* Fondo negro puro */
+            border: 1px solid #444444; /* Borde gris oscuro */
+            border-radius: 6px;
+            color: #ffffff; /* Texto que escribe el usuario en blanco */
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        /* Efecto cuando el usuario hace clic para escribir */
+        form input:focus {
+            outline: none;
+            border-color: #ffffff; /* El borde se vuelve blanco */
+            background-color: #1c1c1c; /* Se aclara un toque el fondo */
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.2); /* Brillo blanco sutil */
+        }
+
+        /* Estilo para el botón de Registrarse */
+        form button {
+            width: 100%;
+            padding: 14px;
+            background-color: #ffffff; /* Botón completamente blanco */
+            color: #1a1a1a; /* Texto negro */
+            border: 2px solid #ffffff;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        /* Efecto cuando pasas el mouse por encima del botón */
+        form button:hover {
+            background-color: #1a1a1a; /* Se vuelve negro */
+            color: #ffffff; /* El texto pasa a blanco */
+            border-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <audio id="musicaDashboard" src="meteora.mp3" loop></audio>
+
+    <div class="welcome-box">
+        
+        <img src="fred.png" alt="el fred durst" class="avatar-img">
+        
+        <h2>Bienvenido a mi página rey, ahora pon tus datos aquí para que le lleguen a la base de datos</h2>
+
+        <form action="procesar_registro.php" method="POST">
+    <input type="text" name="usuario_nombre" placeholder="Nombre completo" required>
+    <input type="email" name="usuario_correo" placeholder="Correo electrónico" required>
+    <input type="password" name="usuario_password" placeholder="Contraseña" required>
+    <button type="submit">Registrarse</button>
+         </form>
+
+    </div>
+
+    <script>
+    // Detecta el primer clic o toque en cualquier parte de la nueva pantalla
+    document.addEventListener('click', () => {
+        const musica = document.getElementById('musicaDashboard');
+        
+        // Ajustamos el volumen un poco más bajo para que no asuste (40%)
+        musica.volume = 0.4; 
+        
+        // Reproduce la música
+        musica.play().catch(error => {
+            console.log("El navegador bloqueó el audio momentáneamente:", error);
+        });
+    }, { once: true }); // 'once: true' hace que este código solo se ejecute con el primer clic
+</script>
+    
+</body>
+</html>

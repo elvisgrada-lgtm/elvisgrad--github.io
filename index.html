@@ -1,122 +1,218 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Ingreso</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="buho.png+.jpg">
+    <title>Inscripciones XD</title>
+    <link rel="icon" href="eskeletor.png">
     <style>
-    /* Estilos generales para centrar el formulario en la pantalla */
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #fdfaf6; /* Fondo con un sutil toque cálido */
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
+        /* --- ESTILOS GENERALES Y BASE --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    /* Contenedor del formulario (Tarjeta blanca) */
-    .form-contenedor {
-        background-color: #ffffff;
-        padding: 30px 40px;
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(230, 126, 34, 0.15); /* Sombra con matiz naranja */
-        width: 100%;
-        max-width: 400px;
-    }
+        body {
+            background-color: #f5f5f5; /* Un gris muy claro de fondo para contrastar */
+            color: #1a1a1a;            /* Negro suave para los textos */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(veeeeee.png);
+           /* 2. Le dices que NO se repita en forma de mosaico */
+    background-repeat: no-repeat;
 
-    /* Título del formulario */
-    h2 {
-        margin-top: 0;
-        margin-bottom: 25px;
-        color: #d35400; /* Naranja oscuro para buena legibilidad */
-        text-align: center;
-        font-size: 24px;
-    }
+    /* 3. Centras la imagen para que no se quede pegada en una esquina */
+    background-position: center;
 
-    /* Contenedor de cada grupo de campo (label + input) */
-    .campo {
-        margin-bottom: 20px;
-    }
+    /* 4. La estiras para que cubra toda la pantalla sin deformarse */
+    background-size: cover;
+        }
 
-    /* Estilo de las etiquetas de texto */
-    label {
-        display: block;
-        margin-bottom: 8px;
-        color: #e67e22; /* Naranja intermedio */
-        font-size: 14px;
-        font-weight: 600;
-    }
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
 
-    /* Estilo de las cajas de texto (Inputs) */
-    input[type="text"],
-    input[type="password"],
-    input[type="email"] {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #f39c12; /* Borde inicial amarillo/dorado oscuro */
-        border-radius: 6px;
-        font-size: 14px;
-        color: #333333;
-        box-sizing: border-box; /* Evita que el padding deforme el ancho */
-        transition: all 0.3s ease;
-    }
+        .form-box {
+            background-color: #ffffff; /* Blanco puro para la tarjeta */
+            padding: 40px 30px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0; /* Borde gris sutil */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra suave */
+        }
 
-    /* Efecto visual cuando el usuario hace clic en un input */
-    input:focus {
-        border-color: #d35400; /* Cambia a naranja oscuro al enfocar */
-        outline: none;
-        box-shadow: 0 0 5px rgba(211, 84, 0, 0.3);
-    }
+        /* --- ELEMENTOS DEL FORMULARIO --- */
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Espacio uniforme entre inputs */
+        }
 
-    /* Estilo del botón de enviar */
-    .btn {
-        width: 100%;
-        background-color: #f1c40f; /* Amarillo brillante base */
-        color: #333333; /* Texto oscuro para contrastar perfectamente con el amarillo */
-        padding: 12px;
-        border: none;
-        border-radius: 6px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        margin-top: 10px;
-    }
+        .form h2 {
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase; /* Letras mayúsculas para estilo clásico */
+            letter-spacing: 1px;
+        }
 
-    /* Efecto cuando pasas el ratón por encima del botón */
-    .btn:hover {
-        background-color: #e67e22; /* Cambia a naranja al pasar el cursor */
-        color: white; /* El texto pasa a blanco para mantener el contraste */
-    }
-</style>
+        /* --- INPUTS (CAMPOS DE TEXTO) --- */
+        .form input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background-color: #fafafa;
+        }
+
+        /* Efecto cuando el usuario hace clic para escribir */
+        .form input:focus {
+            outline: none;
+            border-color: #1a1a1a; /* El borde se vuelve negro */
+            background-color: #ffffff;
+        }
+
+        /* --- BOTONES --- */
+        .form button {
+            width: 100%;
+            padding: 14px;
+            background-color: #1a1a1a; /* Botón negro */
+            color: #ffffff;            /* Texto blanco */
+            border: 1px solid #1a1a1a;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        /* Efecto hover: se invierten los colores al pasar el mouse */
+        .form button:hover {
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+
+        /* --- ENLACES DE CAMBIO (SWITCH) --- */
+        .switch {
+            text-align: center;
+            font-size: 13px;
+            color: #666666; /* Gris para el texto secundario */
+            margin-top: 10px;
+        }
+
+        .switch span {
+            color: #1a1a1a; /* El enlace es negro */
+            cursor: pointer;
+            text-decoration: underline;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+
+        .switch span:hover {
+            color: #555555; /* Se aclara un poco al pasar el mouse */
+        }
+
+        /* --- FUNCIONALIDAD OCULTAR --- */
+        .hidden {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
+   
+<audio id="musicaFondo" src="elvis.mp3" loop></audio>
+</audio>
+    <div class="container">
+        <div class="form-box" id="formbox">
+            
+            <form id="loginform" class="form">
+                <h2>Iniciar Sesión</h2>
+                <input type="email" id="loginEmail" placeholder="Correo electrónico" required>
+                <input type="password" id="loginpassword" placeholder="Contraseña" required>
+                <button type="submit">Ingresar</button>
 
-    <form action="datos.php" method="post">
+                <p class="switch">
+                    ¿No tienes una cuenta?
+                    <span id="goRegister">Regístrate</span>
 
-        <h2>Ingrese sus datos</h2>
+                   
+                </p>
+            </form>
 
-        <div class="campo">
-            <label for="nombre">Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ej. Elvis Rada" required>
+            <form id="Registerform" class="form hidden">
+                <h2>Crear cuenta</h2>
+                <input type="text" id="regName" placeholder="Nombre completo" required>
+                <input type="email" id="regEmail" placeholder="Correo electrónico" required>
+                <input type="password" id="regPassword" placeholder="Contraseña" required>
+                <button type="submit">Registrarse</button>
+
+                <p class="switch">
+                    ¿Ya tienes cuenta?
+                    <span id="goLogin">Inicia sesión</span>
+                </p>
+            </form>
+
         </div>
+    </div>
 
-        <div class="campo">
-            <label for="contrasena">Contraseña (letras y números):</label>
-            <input type="password" id="contrasena" name="contrasena" placeholder="********" required>
-        </div>
+    <script>
+        const loginForm = document.getElementById('loginform');
+        const registerForm = document.getElementById('Registerform');
+        const btnGoRegister = document.getElementById('goRegister');
+        const btnGoLogin = document.getElementById('goLogin');
 
-        <input class="btn" type="submit" value="Entrar">
+        btnGoRegister.addEventListener('click', () => {
+            loginForm.classList.add('hidden');       
+            registerForm.classList.remove('hidden'); 
+        });
 
-    </form>
+        btnGoLogin.addEventListener('click', () => {
+            registerForm.classList.add('hidden');    
+            loginForm.classList.remove('hidden');    
+        });
 
+        // 1. Detectar el primer clic del usuario en la pantalla
+document.addEventListener('click', () => {
+    const musica = document.getElementById('musicaFondo');
+    
+    // 2. Reproducir la música de forma invisible
+    musica.play().catch(error => {
+        console.log("El navegador bloqueó el audio momentáneamente:", error);
+    });
+}, { once: true }); // '{ once: true }' asegura que este truco se ejecute SOLO con el primer clic
+
+// Escuchar cuando el usuario envía el formulario de iniciar sesión
+loginForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Evita que la página se recargue e interrumpa el proceso
+
+    // 1. Capturamos lo que el usuario escribió en las cajas de texto
+    const correo = document.getElementById('loginEmail').value;
+    const contrasena = document.getElementById('loginpassword').value;
+
+    // 2. Aquí puedes poner una validación ficticia (o dejarlo libre)
+    // En este ejemplo, si escribe cualquier cosa, lo dejará pasar:
+    if (correo !== "" && contrasena !== "") {
+        alert("¡Datos correctos! Redirigiendo...");
+        
+        // 3. Esta línea mágica te lleva a tu página en blanco
+        window.location.href = "dashboard.html";
+    } else {
+        alert("Por favor, llena todos los campos.");
+    }
+});
+    </script>
+  
+</a>
 </body>
 </html>
-
-?>
