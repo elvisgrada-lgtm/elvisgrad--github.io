@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Ingreso</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="buho.png+.jpg">
+    <style>
+    /* Estilos generales para centrar el formulario en la pantalla */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fdfaf6; /* Fondo con un sutil toque cálido */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Contenedor del formulario (Tarjeta blanca) */
+    .form-contenedor {
+        background-color: #ffffff;
+        padding: 30px 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(230, 126, 34, 0.15); /* Sombra con matiz naranja */
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Título del formulario */
+    h2 {
+        margin-top: 0;
+        margin-bottom: 25px;
+        color: #d35400; /* Naranja oscuro para buena legibilidad */
+        text-align: center;
+        font-size: 24px;
+    }
+
+    /* Contenedor de cada grupo de campo (label + input) */
+    .campo {
+        margin-bottom: 20px;
+    }
+
+    /* Estilo de las etiquetas de texto */
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #e67e22; /* Naranja intermedio */
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    /* Estilo de las cajas de texto (Inputs) */
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #f39c12; /* Borde inicial amarillo/dorado oscuro */
+        border-radius: 6px;
+        font-size: 14px;
+        color: #333333;
+        box-sizing: border-box; /* Evita que el padding deforme el ancho */
+        transition: all 0.3s ease;
+    }
+
+    /* Efecto visual cuando el usuario hace clic en un input */
+    input:focus {
+        border-color: #d35400; /* Cambia a naranja oscuro al enfocar */
+        outline: none;
+        box-shadow: 0 0 5px rgba(211, 84, 0, 0.3);
+    }
+
+    /* Estilo del botón de enviar */
+    .btn {
+        width: 100%;
+        background-color: #f1c40f; /* Amarillo brillante base */
+        color: #333333; /* Texto oscuro para contrastar perfectamente con el amarillo */
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin-top: 10px;
+    }
+
+    /* Efecto cuando pasas el ratón por encima del botón */
+    .btn:hover {
+        background-color: #e67e22; /* Cambia a naranja al pasar el cursor */
+        color: white; /* El texto pasa a blanco para mantener el contraste */
+    }
+</style>
+</head>
+<body>
+
+    <form action="datos.php" method="post">
+
+        <h2>Ingrese sus datos</h2>
+
+        <div class="campo">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Elvis Rada" required>
+        </div>
+
+        <div class="campo">
+            <label for="contrasena">Contraseña (letras y números):</label>
+            <input type="password" id="contrasena" name="contrasena" placeholder="********" required>
+        </div>
+
+        <input class="btn" type="submit" value="Entrar">
+
+    </form>
+
+</body>
+</html>
+
+?>
